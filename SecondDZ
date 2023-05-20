@@ -4,8 +4,8 @@ class kitten:
     def __init__(self,name):
         self.name=name
         self.radist=5
-        self.syla=5
-        self.divoglyad=5
+        self.syla=2
+        self.divoglyad=2
         self.friendly=5
         self.life=True
     def sleeping(self):
@@ -22,7 +22,7 @@ class kitten:
         self.friendly+=1
     def Eating_proteins(self):
         print("I am eating")
-        self.syla+=3
+        self.syla+=2
         self.radist-=1.5
         self.friendly-=1
     def Eating_norm_eda(self):
@@ -35,7 +35,7 @@ class kitten:
         self.divoglyad+=1
         self.friendly+=1
         self.radist-=0.5
-        self.syla+=1.5
+        self.syla+=0.5
     def Relaxing(self):
         print("I am lazy kitten")
         self.syla-=0.5
