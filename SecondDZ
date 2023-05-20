@@ -1,0 +1,83 @@
+import random
+
+class kitten:
+    def __init__(self,name):
+        self.name=name
+        self.radist=5
+        self.syla=5
+        self.divoglyad=5
+        self.friendly=5
+        self.life=True
+    def sleeping(self):
+        print("I am sleeping")
+        self.radist+=1
+        self.syla+=0.5
+        self.divoglyad-=0.5
+        self.friendly-=0.5
+    def walking(self):
+        print("I am walking")
+        self.divoglyad+=2
+        self.radist+=1
+        self.syla+=0.5
+        self.friendly+=1
+    def Eating_proteins(self):
+        print("I am eating")
+        self.syla+=3
+        self.radist-=1.5
+        self.friendly-=1
+    def Eating_norm_eda(self):
+        print("I am eating")
+        self.syla += 0.5
+        self.radist += 0.5
+        self.friendly -= 1
+    def Learning_comands(self):
+        print("I am clever kitten")
+        self.divoglyad+=1
+        self.friendly+=1
+        self.radist-=0.5
+        self.syla+=1.5
+    def Relaxing(self):
+        print("I am lazy kitten")
+        self.syla-=0.5
+        self.friendly-=0.5
+        self.divoglyad-=1
+    def stan(self):
+        if self.radist<=0:
+            print("You are depressive kitten")
+            self.life=False
+        if self.divoglyad<=0:
+            print("You are blind kitten")
+            self.life = False
+        if self.friendly<=0:
+           print("You are demon-kitten and you in a garbage")
+           self.life = False
+        if self.syla<=0:
+           print("You are weak kitten")
+           self.life = False
+    def dayoff(self):
+        print("Your happiness is",self.radist)
+        print("Your friendship is", self.friendly)
+        print("Your world study is", self.divoglyad)
+        print("Your power is", self.syla)
+    def live(self,day):
+        day=day
+        rnd=random.randint(1,6)
+        if(rnd==1):
+            self.sleeping()
+        if (rnd == 2):
+            self.walking()
+        if (rnd == 3):
+            self.Eating_proteins()
+        if (rnd == 4):
+            self.Eating_norm_eda()
+        if (rnd == 5):
+            self.Learning_comands()
+        if (rnd == 6):
+            self.Relaxing()
+        self.dayoff()
+        self.stan()
+Myla=kitten(name="Myla")
+for day in range(365):
+    Myla.live(day)
+    if Myla.life==False:
+        break
