@@ -1,0 +1,28 @@
+class Subject:
+    form=input("Введіть клас, в якому навчаєтесь")
+    napryam="Mathematika"
+class Algebra(Subject):
+    def __init__(self,phormules,prikladi):
+        self.phormules=phormules
+        self.prikladi=prikladi
+    def printing(self):
+        print(f"У {self.form} класі в предметі Алгебра вивчаються {self.phormules} і {self.prikladi}")
+class Geometry(Subject):
+    def __init__(self,zadachi,teorema):
+        self.zadachi=zadachi
+        self.teorema=teorema
+    def printing(self):
+        print(f"В {self.form} класі в геометрії вивчають {self.zadachi} і {self.teorema}")
+class Kreslenia(Geometry):
+    def __init__(self,figures):
+        self.figures=figures
+    def printing(self):
+        print(f"У {self.form} класі в кресленні, як в геометрії, використовуються {self.figures}")
+KR=Kreslenia("різні фігури, такі як: прямокутник, паралелепіпед, трикутник, коло тощо")
+KR.printing()
+first_napryam=Algebra("цікаві формули","різні приклади")
+first_napryam.printing()
+second_napryam=Geometry("різний тип задач","теорема, наприклад, Піфагора")
+second_napryam.printing()
+print(f"Геометрія й алгебра відноситься до напрямку {second_napryam.napryam}")
+print(f"Креслення також відноситься до напрямку {KR.napryam}")
