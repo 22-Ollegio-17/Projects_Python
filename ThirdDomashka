@@ -1,0 +1,24 @@
+class Human:
+    def __init__(self,name):
+        self.name=name
+class Sch_Zav:
+    def __init__(self,nazva_zaklady):
+        self.nazva_zaklady=nazva_zaklady
+        self.pupils=[]
+    def add_pupils(self,*args):
+        for pupil in args:
+            self.pupils.append(pupil)
+    def name_pupils(self):
+        if self.pupils != [];
+        print(f"В навчальному закладі, під назвою {self.nazva_zaklady} присутні такі учні: ")
+        for pupil in self.pupils:
+            print(pupil.name)
+h1=Human(input("Введіть ім'я першого учня/учениці"))
+h2=Human(input("Введіть ім'я другого учня/учениці"))
+h3=Human("Artem")
+zaklad1=Sch_Zav(input("Введіть назву навчального закладу"))
+zaklad2=Sch_Zav("Кременчуцька гімназія №12")
+zaklad1.add_pupils(h1,h2)
+zaklad1.name_pupils()
+zaklad2.add_pupils(h3)
+zaklad2.name_pupils()
