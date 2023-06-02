@@ -9,8 +9,8 @@ class Sch_Zav:
         for pupil in args:
             self.pupils.append(pupil)
     def name_pupils(self):
-        if self.pupils != [];
-        print(f"В навчальному закладі, під назвою {self.nazva_zaklady} присутні такі учні: ")
+        if self.pupils != []:
+         print(f"В навчальному закладі, під назвою {self.nazva_zaklady} присутні такі учні: ")
         for pupil in self.pupils:
             print(pupil.name)
 h1=Human(input("Введіть ім'я першого учня/учениці"))
